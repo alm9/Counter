@@ -8,7 +8,13 @@ class Counter extends StatefulWidget {
 class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Contador"),
+      ),
+    );
   }
 }
+
+//instead of Container, used the component Scaffold
 
