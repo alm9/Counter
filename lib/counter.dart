@@ -14,7 +14,7 @@ class _CounterState extends State<Counter> {
         centerTitle: true,
         backgroundColor: Colors.indigo,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Text("Text one", style: TextStyle(fontSize: 40)),
           Text("Text two", style: TextStyle(fontSize: 40)),
