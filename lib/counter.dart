@@ -6,6 +6,18 @@ class Counter extends StatefulWidget {
 }
 
 class _CounterState extends State<Counter> {
+  var quantity = 0;
+
+  increment(){
+    quantity++;
+    debugPrint(quantity.toString());
+  }
+
+  decrement(){
+    quantity--;
+    debugPrint(quantity.toString());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,16 +34,16 @@ class _CounterState extends State<Counter> {
                 ListTile(
                   title: Text("Quantity:", style: TextStyle(fontSize: 30),),
                 ),
-                Text('0', style: TextStyle(fontSize: 50),),
+                Text('$quantity', style: TextStyle(fontSize: 50),),
                 ButtonBar(
                   children: [
                     FlatButton(
                       child: Text('Increment', style: TextStyle( fontSize: 20),),
-                      onPressed: () => {},
+                      onPressed: increment,
                     ),
                     FlatButton(
                       child: Text('Decrement', style: TextStyle(fontSize: 20),),
-                      onPressed: () => {},
+                      onPressed: decrement,
                     )
                   ],
                 )
