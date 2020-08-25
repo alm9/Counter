@@ -16,6 +16,28 @@ class _CounterState extends State<Counter> {
       ),
       body: ListView(
         children: [
+          Card(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text("Quantity:", style: TextStyle(fontSize: 30),),
+                ),
+                Text('0', style: TextStyle(fontSize: 50),),
+                ButtonBar(
+                  children: [
+                    FlatButton(
+                      child: Text('Increment', style: TextStyle( fontSize: 20),),
+                      onPressed: () => {},
+                    ),
+                    FlatButton(
+                      child: Text('Decrement', style: TextStyle(fontSize: 20),),
+                      onPressed: () => {},
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
           Text("Text one", style: TextStyle(fontSize: 40)),
           Text("Text two", style: TextStyle(fontSize: 40)),
           Text("Text three", style: TextStyle(fontSize: 40)),
